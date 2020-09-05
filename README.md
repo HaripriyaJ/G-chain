@@ -7,7 +7,7 @@ The project G-chain (as of 5 September 2020) was implemented for digitizing pens
   2. Applicant Form Submission:
     Necessary details for pension form (project convinient variant of Form-5: https://pensionersportal.gov.in/forms/formsforoffices/form-5.pdf) is collected and stored on the blockchain. 
   3. Application Form Status 
-  4. Smart contract based data storage and retrieval
+  4. Smart contract based data storage and retrieval: Implemented using web3 calls.
   5. Applicant Alerts:
     Applicant is notified whether their request/application was approved or rejected by who, at what time and for what reason (applicable only for rejection). 
   6. Government Official Login
@@ -26,5 +26,6 @@ The project G-chain (as of 5 September 2020) was implemented for digitizing pens
   - Remix IDE for contract deployment / deploy the contract using Truffle.
   
   
-
+Any suggestions/add-ons are welcome. 
+Check the LICENSE File before proceeding. 
 
