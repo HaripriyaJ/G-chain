@@ -1,0 +1,48 @@
+p.big {
+  line-height:1.8;
+}
+
+.col-6{
+  float: right;
+  width: 10%;
+  margin-top: 8px;
+}
+.col-30{
+  float: right;
+  width: 30%;
+  margin-top: 8px;
+}
+.col-25 {
+  float: right;
+  width: 40%;
+  margin-top: 8px;
+
+}
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 8px;
+  margin-left: 100px;
+}
+.div {
+  width:1020px;
+  margin: auto;
+  border: 1px solid red;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: chocolate;
+  background-color: black;
+}
+.block {
+  width: 100%;
+  border:none;
+  color: black;
+  height: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+ background:linear-gradient(235deg,#0b163d,rgb(204, 118, 57),#0b163d);;
+}

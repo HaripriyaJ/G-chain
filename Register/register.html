@@ -1,0 +1,189 @@
+<html>
+    <head>
+        <title>APPLICANT REGISTRATION</title>
+		<script src="/blockdata/node_modules/web3/dist/web3.min.js"></script>
+		<link rel="stylesheet" href="/blockdata/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>	
+		<style>
+			.row
+			{
+				width: 80%;
+			}
+		</style>
+	</head>
+	<body style="background-color: black;">
+		<nav class="navtop" style="box-shadow:5px 5px 10px rgba(0, 255, 255, 0.603);height:90px;width: 100%;background-color: black;">
+			<div>
+				<h1><a class="navbar-brand" href="#" style="float:left;">
+				<img src="/blockdata/Applicant/dependency/images/gchan.png" alt="" style="height:80px;width:80px;"> </a></h1>
+                <a href="/blockdata/home.php"><i class="fas fa-user-circle"></i>HOME</a>
+			</div>
+		</nav>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		
+		<div class="content1">
+			<div class="box">
+				<div class="content">
+					<br/>
+					<center><h2>APPLICANT REGISTRATION</h2></center>
+					<br/>
+					<center><i class="fas fa-user fa-2x"style="color:chocolate;"></i>
+						<input type="text"  placeholder="Your Aadhar Number" id="aadharno"  class="row" ><br><br><br/></center>
+					
+	
+						<center><i class="fas fa-user fa-2x"style="color:chocolate;"></i>
+						<input type="text"  placeholder="Your Legal Name" id="name" readonly  class="row"><br><br><br></center>
+						
+			
+						<center>	<i class="fas fa-user fa-2x"style="color:chocolate;"></i>		
+						<input type="text"  placeholder="Your Registered Email-id" id="email" readonly class="row"><br><br><br></center>
+						
+			
+						<center>	<i class="fas fa-lock fa-2x" style="color:chocolate;"></i>
+						<input type="password" name="password" placeholder="Password" id="password" readonly class="row"><br><br><br/></center>
+						
+
+					<center>
+						<p"><input type="submit" id="register" value= "REGISTER" style="width: 85%;" ></p>
+					</center>
+					<br/>
+				</div>
+			</div>
+		</div>	
+			
+
+        <script>
+            $("#register").click(function(){
+                var  aadharno= parseInt($("#aadharno").val());
+                web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545")) // else explicitly specify where to inject
+                var abi = [
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "_aadhar",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "_name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "_designation",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "_dob",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "_empAddr",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "_email",
+								"type": "string"
+							}
+						],
+						"name": "setEmployeeDetails",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "_aadhar",
+								"type": "uint256"
+							}
+						],
+						"name": "getEmployeeDetails",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "",
+								"type": "string"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					}
+				]
+                var employeeDetails = new web3.eth.Contract(abi, SMART CONTRACT ADRESS);
+                web3.eth.getAccounts().then(function(accounts)
+                {
+                    var my_account = accounts[0];
+                    console.log(my_account);
+                    employeeDetails.methods.getEmployeeDetails(aadharno).call().then(function(obj){
+                        var i;
+                        var text = "";
+                        for (i = 0; i < 6; i++) {
+                            text = text + obj[i] + "\n";
+                        }
+                        if(obj[1]!="" && (aadharno==obj[0]))
+                        {
+                            document.getElementById("name").value=obj[1];
+                            document.getElementById("email").value=obj[5];
+                            document.getElementById("password").value=obj[1];
+
+                            // php code to check whether user is already registered or not
+                            $.post('register.php', { aadhar: aadharno, name:obj[1], email: obj[5], password:aadharno}, function(result) {
+                                if(result=="Already Registered"){
+                                    alert(result);
+                                    window.location.href= "/blockdata/home.php";
+                                }
+                                else 
+                                {
+                                    alert("Authenticated User!\n" + "Your login password is your Aadhar Number");
+                                    alert("Registration Successful!"); 
+                                    window.location.href= "/blockdata/home.php";
+                                } 
+                            });                            
+                        }
+                        else
+                        {
+                            alert("No such record found.\nEnter your valid 10-digit Aadhar number!");
+                        }
+                    });            
+                });
+            });
+        </script>    
+    </body>
+</html>

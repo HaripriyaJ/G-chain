@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Login</title>
+        <link href="./dependency/CSSstyle.css" rel="stylesheet" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">	</head>
+		<style>
+			html{
+				position:fixed;
+				top:0;
+				bottom:0;
+				left:0;
+				right:0;
+			}
+		</style>
+	<body style="background-color: black;">
+		
+		<nav class="navtop" style="box-shadow: 5px 5px 20px green;height:80px">
+            <div>
+                <h1><a class="navbar-brand" href="#" style="float:left;">
+					<img src="/blockdata/Applicant/dependency/images/gchan.png" alt="" style="height:70px;width:80px;"> </a></h1>
+                <a href="/blockdata/home.php"><i class="fas fa-sign-out-alt"></i>HOME</a>
+            </div>
+        </nav>
+		<div class="login "style="box-shadow: 0px 0px 80px green;">
+			<b><h1>EMPLOYEE LOGIN</h1></b>
+			<form action="authenticate.php" method="post">
+				<label for="username" style="background-color: black;">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="username" placeholder="Username" id="username" required>
+				<label for="password"style="background-color: black;">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password" required>
+				<label for="designation"style="background-color: black;">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="designation" placeholder="Designation" id="designation" required>
+				<input type="submit" value="Login" >
+			</form>
+		</div>
+	</body>
+</html>
