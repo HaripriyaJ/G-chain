@@ -21,11 +21,11 @@ The project G-chain (as of 5 September 2020) was implemented for digitizing pens
 * Project Setup:
   - OS: Windows 10
   - Server: Free and open-source cross-platform web server, XAMPP (local hosting)
-  - Other requirements: Installation of web3, installation of ganache-cli/GANACHE Truffle Suite (https://www.trufflesuite.com/ganache), CDN of vue-js, sweetalert2, bootstrap4, JavaScript, jQuery, font-awesome.
+  - Installation requirements: Installation of web3, installation of ganache-cli/GANACHE Truffle Suite (https://www.trufflesuite.com/ganache)
   - Code Editor: Free source-code editor, Visual Studio Code.
   - Remix IDE for contract deployment / deploy the contract using Truffle.
   
   
-Any suggestions/add-ons are welcome. 
-Check the LICENSE File before proceeding. 
+Any suggestions/add-ons/optimizing ideas are welcome. 
+Check the <b>LICENSE</b> File before proceeding. 
 
