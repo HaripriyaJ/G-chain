@@ -18,6 +18,7 @@ The project G-chain (as of 5 September 2020) was implemented for digitizing pens
 * Download these files into a folder with foldername 'blockdata' --> else, work through all the files to change the path name.
 * Run the SQL commands in the DATABASES folder for proper functioning. 
 * Check the OUTPUT folder for results (Last Modified 5th of September 2020)
+* Extract the zipped files- node_modules (contains web3), PHPMailer (to send e-mail alerts) in their respective folders
 * Project Setup:
   - OS: Windows 10
   - Server: Free and open-source cross-platform web server, XAMPP (local hosting)
