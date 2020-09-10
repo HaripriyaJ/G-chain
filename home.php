@@ -87,11 +87,11 @@
 							style="width:300px;height:300px;border: 1px solid brown;">
 						</div>
 						<div class="flip-card-back">
-						<hr/>
-						<h2>OUR MISSION</h2>
-						<hr/>
-						<hr/>
-						<p>In this digital era we provide a solution that makes the life of an employee more digitized and secure.</p>
+							<hr/>
+							<h2>OUR MISSION</h2>
+							<hr/>
+							<hr/>
+							<p>In this digital era we provide a solution that makes the life of an employee more digitized and secure.</p>
 						</div>
 					</div>
 				</div>
@@ -105,11 +105,11 @@
 							style="width:300px;height:300px;border: 1px solid brown;">
 						</div>
 						<div class="flip-card-back">
-						<hr/>
-						<h2>OUR PROMISE</h2>
-						<hr/>
-						<hr/>
-						<p>One portal solution for all your Government provided benefit.</p>
+							<hr/>
+							<h2>OUR PROMISE</h2>
+							<hr/>
+							<hr/>
+							<p>One portal solution for all your Government provided benefit.</p>
 						</div>
 					</div>
 				</div>
@@ -120,15 +120,15 @@
 					<div class="flip-card-inner">
 						<div class="flip-card-front">
 							<h1 style="border: 1px solid brown;">#3</h1>
-						<img src="/blockdata/Applicant/dependency/images/gchan.png" alt="Avatar" 
-						style="width:300px;height:300px;border: 1px solid brown;">
+							<img src="/blockdata/Applicant/dependency/images/gchan.png" alt="Avatar" 
+							style="width:300px;height:300px;border: 1px solid brown;">
 						</div>
 						<div class="flip-card-back">
-						<hr/>
-						<h2>OUR ESSENCE</h2>
-						<hr/>
-						<hr/>
-						<p>A click away from a better, secured, compatible and constructive future.</p>
+							<hr/>
+							<h2>OUR ESSENCE</h2>
+							<hr/>
+							<hr/>
+							<p>A click away from a better, secured, compatible and constructive future.</p>
 						</div>
 					</div>
 				</div>
