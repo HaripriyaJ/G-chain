@@ -19,7 +19,7 @@
 			<div>
 				<h1><a class="navbar-brand" href="#" style="float:left;">
 				<img src="/blockdata/Applicant/dependency/images/gchan.png" alt="" style="height:80px;width:80px;"> </a></h1>
-                <a href="/blockdata/home.php"><i class="fas fa-user-circle"></i>HOME</a>
+                		<a href="/blockdata/home.php"><i class="fas fa-user-circle"></i>HOME</a>
 			</div>
 		</nav>
 		<br/>
@@ -34,21 +34,20 @@
 					<center><h2>APPLICANT REGISTRATION</h2></center>
 					<br/>
 					<center><i class="fas fa-user fa-2x"style="color:chocolate;"></i>
-						<input type="text"  placeholder="Your Aadhar Number" id="aadharno"  class="row" ><br><br><br/></center>
+					<input type="text"  placeholder="Your Aadhar Number" id="aadharno"  class="row" ><br><br><br/></center>
 					
 	
-						<center><i class="fas fa-user fa-2x"style="color:chocolate;"></i>
-						<input type="text"  placeholder="Your Legal Name" id="name" readonly  class="row"><br><br><br></center>
-						
-			
-						<center>	<i class="fas fa-user fa-2x"style="color:chocolate;"></i>		
-						<input type="text"  placeholder="Your Registered Email-id" id="email" readonly class="row"><br><br><br></center>
-						
-			
-						<center>	<i class="fas fa-lock fa-2x" style="color:chocolate;"></i>
-						<input type="password" name="password" placeholder="Password" id="password" readonly class="row"><br><br><br/></center>
-						
+					<center><i class="fas fa-user fa-2x"style="color:chocolate;"></i>
+					<input type="text"  placeholder="Your Legal Name" id="name" readonly  class="row"><br><br><br></center>
 
+
+					<center>	<i class="fas fa-user fa-2x"style="color:chocolate;"></i>		
+					<input type="text"  placeholder="Your Registered Email-id" id="email" readonly class="row"><br><br><br></center>
+
+
+					<center>	<i class="fas fa-lock fa-2x" style="color:chocolate;"></i>
+					<input type="password" name="password" placeholder="Password" id="password" readonly class="row"><br><br><br/></center>
+						
 					<center>
 						<p"><input type="submit" id="register" value= "REGISTER" style="width: 85%;" ></p>
 					</center>
@@ -62,90 +61,7 @@
             $("#register").click(function(){
                 var  aadharno= parseInt($("#aadharno").val());
                 web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545")) // else explicitly specify where to inject
-                var abi = [
-					{
-						"inputs": [
-							{
-								"internalType": "uint256",
-								"name": "_aadhar",
-								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "_name",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "_designation",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "_dob",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "_empAddr",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "_email",
-								"type": "string"
-							}
-						],
-						"name": "setEmployeeDetails",
-						"outputs": [],
-						"stateMutability": "nonpayable",
-						"type": "function"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "uint256",
-								"name": "_aadhar",
-								"type": "uint256"
-							}
-						],
-						"name": "getEmployeeDetails",
-						"outputs": [
-							{
-								"internalType": "uint256",
-								"name": "",
-								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "",
-								"type": "string"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					}
-				]
+                var abi = PASTE THE SMART CONTRACT ABI Here (Service book smart contract)
                 var employeeDetails = new web3.eth.Contract(abi, SMART CONTRACT ADRESS);
                 web3.eth.getAccounts().then(function(accounts)
                 {
