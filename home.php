@@ -2,81 +2,81 @@
     <head>
         <title>HOME</title>
         <link href="style.css" rel="stylesheet" type="text/css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
         <style>
-			html{
-				position:fixed;
-				top:0;
-				bottom:0;
-				left:0;
-				right:0;
-			}
-			.flip-card {
-				background-color: transparent;
-				width: 300px;
-				height: 300px;
-			}
+		html{
+			position:fixed;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+		}
+		.flip-card {
+			background-color: transparent;
+			width: 300px;
+			height: 300px;
+		}
 
-			.flip-card-inner {
-				position: relative;
-				width: 100%;
-				height: 100%;
-				text-align: center;
-				transition: transform 0.6s;
-				transform-style: preserve-3d;
-				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-			}
+		.flip-card-inner {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			transition: transform 0.6s;
+			transform-style: preserve-3d;
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		}
 
-			.flip-card:hover .flip-card-inner {
-				transform: rotateY(180deg);
-			}
+		.flip-card:hover .flip-card-inner {
+			transform: rotateY(180deg);
+		}
 
-			.flip-card-front, .flip-card-back {
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				-webkit-backface-visibility: hidden;
-				backface-visibility: hidden;
-			}
+		.flip-card-front, .flip-card-back {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+		}
 
-			.flip-card-front {
-				background-color: black;
-				color: brown;
-			}
+		.flip-card-front {
+			background-color: black;
+			color: brown;
+		}
 
-			.flip-card-back {
-				background-color: black;
-				color: white;
-				transform: rotateY(180deg);
-				box-shadow: 0px 0px 90px brown;
+		.flip-card-back {
+			background-color: black;
+			color: white;
+			transform: rotateY(180deg);
+			box-shadow: 0px 0px 90px brown;
 
-			}
-			/* Float four columns side by side */
-			.column {
-				float: left;
-				padding: 50px 0px;
-			}
-			
+		}
+		/* Float four columns side by side */
+		.column {
+			float: left;
+			padding: 50px 0px;
+		}
+
 
 		
-		</style>
+	</style>
         
     </head>
     <body style="background-color: black; ">
         <nav class="navtop" style="box-shadow: 5px 5px 20px brown; height:90px;">
 			<div>
 				<h1><a class="navbar-brand" href="#" style="float:left;">
-          		<img src="/blockdata/Applicant/dependency/images/gchan.png" alt="" style="height:80px;width:80px;"> </a></h1>
-                <a href="Register/register.html"><i class="fas fa-user-circle"></i>REGISTER</a>
-                <a href="login.php"><i class="fas fa-user-circle"></i>LOGIN</a>
+				<img src="/blockdata/Applicant/dependency/images/gchan.png" alt="" style="height:80px;width:80px;"> </a></h1>
+				<a href="Register/register.html"><i class="fas fa-user-circle"></i>REGISTER</a>
+               			 <a href="login.php"><i class="fas fa-user-circle"></i>LOGIN</a>
 			</div>
         </nav>
         <br/>
         <br/>
         <br/>
-		<hr/>
+	<hr/>
         <div class="row">
 			<div class="column" style="padding-left: 140px; ">
 				<div class="flip-card" >
