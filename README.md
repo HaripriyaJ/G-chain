@@ -29,8 +29,8 @@ The project G-chain (as of 5 September 2020) was implemented for digitizing pens
 <br/><b>Please Note</b><br/>
 * Download these files into a folder with foldername 'blockdata' --> else, work through all the files to change the path name.
 * Run the SQL commands in the <b>DATABASES</b> folder for proper functioning. 
-* Check the <b>OUTPUT</b> folder for results (Last Modified 5th of September 2020)
-* Extract the zipped files- node_modules (contains web3), PHPMailer (to send e-mail alerts) in their respective folders
+* Check the <b>OUTPUT</b> folder for results (Last Modified 5th of September 2020).
+* Extract the zipped files- node_modules (contains web3), PHPMailer (to send e-mail alerts) in their respective locations.
 * Substitude ABI and Contract Address in the corresponding files. 
 
 <br/>Any suggestions/add-ons/optimization ideas are welcome. 
